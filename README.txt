@@ -11,6 +11,19 @@ Una vez activado instalar django y pillow:
 
     python -m pip install Pillow
 
+Instalar pylint:
+    pip install pylint-django
+
+Para activar pylint:
+    1) ir a archivo
+    2) Preferencias/configuración
+    3) Buscar pylintArgs en el buscador
+    4) En python.linting.pylintArgs tocar agregar elemenots
+        a) "pylint.args": ["--errors-only"]
+        b) "pylint.args": ["--load-plugins"]
+        c) "pylint.args": ["--pylint_django"]
+
+
 Dirigirnos a:
     cd webpersonal
 
