@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'portfolio.apps.PortfolioConfig',
+    'about_me.apps.AboutMeConfig',
 ]
 
 MIDDLEWARE = [
