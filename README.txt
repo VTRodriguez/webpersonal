@@ -30,3 +30,16 @@ Dirigirnos a:
 Levantar el proyecto con:
     python manage.py runserver
 
+
+
+Correr migraciones:
+
+Ejecutar: 
+    python manage.py makemigrations <nombre de la carpeta a migrar>
+
+    ejemplo: python manage.py makemigrations about_me
+
+Luego correr:
+    python manage.py migrate <nombre de la carpeta a migrar>
+
+
