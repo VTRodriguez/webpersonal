@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'portfolio.apps.PortfolioConfig',
     'about_me.apps.AboutMeConfig',
+    'experience.apps.ExperienceConfig',
 ]
 
 MIDDLEWARE = [

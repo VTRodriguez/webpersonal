@@ -19,6 +19,7 @@ from django.urls import path
 from core import views as core_views
 from portfolio import views as portfolio_views
 from about_me import views as about_me_views
+from experience import views as experience_views
 
 from django.conf import settings
 
@@ -27,7 +28,7 @@ urlpatterns = [
     path('', core_views.home, name="home"),
     path('about-me/', about_me_views.about_me, name="about"),
     path('portfolio/', portfolio_views.portfolio, name="portfolio"),
-    path('experience/', core_views.experience, name="experience"),
+    path('experience/', experience_views.experience, name="experience"),
     path('admin/', admin.site.urls),
 ]
 
