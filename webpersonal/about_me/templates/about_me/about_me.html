@@ -1,0 +1,52 @@
+{%extends 'core/base.html'%}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background%}{%load static%}{% static 'core/img/about-bg.jpg' %}{%endblock%}
+
+{% block headers %}
+    <h1>Acerca de mi</h1>
+    <span class="subheading"><i>Biografía</i></span>
+{% endblock %}
+
+{% block content %}
+    <div class="row">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid avatar" src="{% static 'core/img/tomas.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading">Tomás Rodríguez</h2>   
+            <p>Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
+        </div>
+    </div>
+    <br>
+    
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="col-lg-7 col-md-8 text-center">
+            <h2 class="section-heading">Estudios</h2>   
+        </div>
+    </div>
+
+    {% for project in projects%}
+    <!-- Proyecto -->
+        <div class="row project">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{project.image.url}}" alt="">
+            </div>
+        <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{project.title}}</h2>   
+            <p>{{project.description}}</p>
+            <!--<p><a href="http://google.com">Más información</a></p>-->
+            </div>
+        </div>
+
+    {%endfor%}
+
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="col-lg-7 col-md-8 text-center">
+            <h2 class="section-heading">Tiempo libre</h2>   
+        </div>
+    </div>
+
+{% endblock %}
