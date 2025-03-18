@@ -16,13 +16,13 @@
         </div>
         <div class="col-lg-7 col-md-8">
             <h2 class="section-heading">Tomás Rodríguez</h2>   
-            <p>Nacido en... lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
+            <p>Nacido en Argentina en 1996, me mudé a Montevideo, Uruguay, cuando tenía 2 años de edad. Siempre me gustó la tecnología, y esa curiosidad me llevó a estudiar en la rama de ingeniería durante el bachillerato.
+                Me interesa mucho el desarrollo de software, especialmente el backend, aunque no descarto el full-stack development. Disfruto trabajar en equipo, soy sociable y siempre estoy dispuesto a dar una mano. Me gusta aprender de los demás, seguir indicaciones cuando hace falta, pero también aportar mis ideas para encontrar las mejores soluciones juntos.
+
+            </p>
         </div>
     </div>
     <br>
-
-    <hr>
     
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="col-lg-7 col-md-8 text-center">
@@ -45,12 +45,29 @@
 
     {%endfor%}
 
-    <hr>
+    
 
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="col-lg-7 col-md-8 text-center">
             <h2 class="section-heading">Tiempo libre</h2>   
         </div>
     </div>
+
+    <br>
+
+    {% for hobby in hobbies%}
+    <!-- Proyecto -->
+        <div class="row hobby">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{hobby.image.url}}" alt="">
+            </div>
+        <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{hobby.name}}</h2>   
+            <p>{{hobby.description}}</p>
+            <hr>
+            </div>
+        </div>
+
+    {%endfor%}
 
 {% endblock %}
